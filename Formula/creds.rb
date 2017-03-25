@@ -1,8 +1,8 @@
 class Creds < Formula
-  desc "Simple encrypted credential file management with GPG"
+  desc "Simple encrypted credential management with GPG"
   homepage "https://github.com/joemiller/creds"
-  url "https://github.com/joemiller/creds/archive/v0.0.3.tar.gz"
-  sha256 "f7cf9b3c9bfad516fc01004e6791a20f899cf58502623fc0eb353b6433fd07f5"
+  url "https://github.com/joemiller/creds/archive/v0.0.4.tar.gz"
+  sha256 "7ce70ac27916dc9ae541ca81ea574a2064eb883adf74ff06b8dc155cda411c80"
 
 	head "https://github.com/joemiller/creds.git"
 
