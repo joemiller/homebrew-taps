@@ -1,9 +1,9 @@
 class VaultGpgTokenHelper < Formula
   desc "A @hashicorp Vault token helper for GPG (+ yubikey)"
   homepage "https://github.com/joemiller/vault-gpg-token-helper"
-  url "https://github.com/joemiller/vault-gpg-token-helper/releases/download/v0.1.1/vault-gpg-token-helper_0.1.1_darwin_amd64.tar.gz"
-  version "0.1.1"
-  sha256 "b18580d6da4ca982f3d88ff2bb16da482036e862d4c761e96c555d4061ee34f9"
+  url "https://github.com/joemiller/vault-gpg-token-helper/releases/download/v0.1.2/vault-gpg-token-helper_0.1.2_darwin_amd64.tar.gz"
+  version "0.1.2"
+  sha256 "20ce7cb3dfcaac68765f88ee7b27847e3bc4ae0b6500c42d0ab7041e3cb2e27b"
 
   def install
     bin.install "vault-gpg-token-helper"
