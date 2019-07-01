@@ -6,10 +6,10 @@ class VaultTokenHelper < Formula
 
   if OS.mac?
     url "https://github.com/joemiller/vault-token-helper/releases/download/v0.0.5/vault-token-helper_0.0.5_darwin_amd64.tar.gz"
-    sha256 "6f7cd780cb9fe9553fd7e7bc18353f69919484c5b86f05e9b7f9ecd24bf3023c"
+    sha256 "a0fcbb1f70236a3f7d8eb28aa6b9b66d5f2cdf67a26933f554c14761506bcfa5"
   elsif OS.linux?
     url "https://github.com/joemiller/vault-token-helper/releases/download/v0.0.5/vault-token-helper_0.0.5_linux_amd64.tar.gz"
-    sha256 "c8eb57aae6ff55f1e169a35341370c23c329a54c4ae6ac0c22e59094673d633e"
+    sha256 "8a9ef783ddcd615ea17f31aa1094caf851b90d5e809de3d74f0b4488bb0d755e"
   end
   
   depends_on "vault"
