@@ -2,14 +2,13 @@
 class VaultTokenHelper < Formula
   desc "Cross-platform @hashicorp Vault token helper"
   homepage "https://github.com/joemiller/vault-token-helper"
-  version "0.1.2"
+  version "0.2.0"
+  bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.1.2/vault-token-helper_0.1.2_darwin_amd64.tar.gz"
-    sha256 "449ad0a27f2098e509a46ac6785fec80ea000c6bf00320f94fbaac378d6f8b6b"
   elsif OS.linux?
-    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.1.2/vault-token-helper_0.1.2_linux_amd64.tar.gz"
-    sha256 "32705634f1259662a85a89716c34e4a777720cfdb72454690566c76fe63495e5"
+    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.2.0/vault-token-helper_0.2.0_linux_amd64.tar.gz"
+    sha256 "42f7a800b68f6ebf6e3d31ba08bda2b300edd269caeadb61e9996758549a60c1"
   end
   
   depends_on "vault"
