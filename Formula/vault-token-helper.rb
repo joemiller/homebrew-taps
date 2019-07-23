@@ -10,7 +10,7 @@ class VaultTokenHelper < Formula
     sha256 "1d7227c28d19a598164e3a106545f3ee79458c44b000a842ead8529c3d6223ec"
   elsif OS.linux?
     url "https://github.com/joemiller/vault-token-helper/releases/download/v0.2.2/vault-token-helper_0.2.2_linux_amd64.tar.gz"
-    sha256 "565cb0334bbfc4821636eafab4e951a86f16dcacd861026194c73a247bf05538"
+    sha256 "b41b092cdc2962866ff961a7f215ccfb29633e0bc5d3fb95e5bcf0ef8fe5d463"
   end
   
   depends_on "vault"
