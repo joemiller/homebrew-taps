@@ -11,6 +11,7 @@ Available packages ("Formula")
 - [docker-tail](https://github.com/joemiller/docker-tail): Tail the logs of multiple docker containers
   with improved readability and colors.
  - [vault-gpg-token-helper](https://github.com/joemiller/vault-gpg-token-helper): A @hashicorp Vault token helper for GPG (+ yubikey)
+ - [openssh-u2f](https://marc.info/?l=openssh-unix-dev&m=157259802529972&w=2): Experimental keg-only formula for OpenSSH built with U2F (yubikey) support
 
 Usage
 -----
