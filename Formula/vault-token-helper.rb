@@ -2,16 +2,16 @@
 class VaultTokenHelper < Formula
   desc "Cross-platform @hashicorp Vault token helper"
   homepage "https://github.com/joemiller/vault-token-helper"
-  version "0.3.2"
+  version "0.3.3"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.2/vault-token-helper_0.3.2_darwin_amd64.tar.gz"
-    sha256 "05aeae45ad424e55d312ba346f004854ff1c2e309438f7eb57a9b2a785e002ef"
+    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.3/vault-token-helper_0.3.3_darwin_amd64.tar.gz"
+    sha256 "b4cb3f89e8c42f82de5045d92f29d51e7831bb7b4b1f2f4f5002f4eca2590a3a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.2/vault-token-helper_0.3.2_linux_amd64.tar.gz"
-      sha256 "6e592b0315fd7642ea78f259c822cd06222405ba25576ee61e95d2b298a59b6e"
+      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.3/vault-token-helper_0.3.3_linux_amd64.tar.gz"
+      sha256 "63ca4930fc77a9edb42c0e3f95f628e8dd68f9318f9602d82fc8dc2cb87b8530"
     end
   end
   
@@ -22,7 +22,7 @@ class VaultTokenHelper < Formula
   end
 
   def caveats; <<~EOS
-    Run this to create the ~/.vault file. This will instruct vault to use the token helper:
+    Run this to create the ~/.vault file. This will configure vault to use the token helper:
     
       vault-token-helper enable
   EOS
