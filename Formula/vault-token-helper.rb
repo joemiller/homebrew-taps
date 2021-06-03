@@ -5,16 +5,21 @@
 class VaultTokenHelper < Formula
   desc "Cross-platform @hashicorp Vault token helper"
   homepage "https://github.com/joemiller/vault-token-helper"
-  version "0.3.4"
+  version "0.3.5"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.4/vault-token-helper_0.3.4_darwin_amd64.tar.gz"
-    sha256 "60c6fdc0d8e3a44b46d5349d210e62810d783053e21b6f1d5baa03b9862e9de8"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.5/vault-token-helper_0.3.5_darwin_amd64.tar.gz"
+      sha256 "c55f7d24fb9a3a3e54b02c15e1cfe4c3e6669edf63df405520858e8571df7ed0"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.4/vault-token-helper_0.3.4_linux_amd64.tar.gz"
-    sha256 "19c1c784c83bd3b768bf6618223e530747d845cb1cb17be66373c8c651a6936e"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.5/vault-token-helper_0.3.5_linux_amd64.tar.gz"
+      sha256 "e95c2faa83f83a48d17bb79295ac8b736df471f8b1256c735e27d5cf81211279"
+    end
   end
 
   depends_on "vault"
