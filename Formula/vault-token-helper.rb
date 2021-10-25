@@ -5,28 +5,31 @@
 class VaultTokenHelper < Formula
   desc "Cross-platform @hashicorp Vault token helper"
   homepage "https://github.com/joemiller/vault-token-helper"
-  version "0.3.5"
-  bottle :unneeded
+  version "0.3.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.5/vault-token-helper_0.3.5_darwin_amd64.tar.gz"
-      sha256 "c55f7d24fb9a3a3e54b02c15e1cfe4c3e6669edf63df405520858e8571df7ed0"
+      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.6/vault-token-helper_0.3.6_darwin_amd64.tar.gz"
+      sha256 "37e2e1acbc7d5e35e16b0c74c5fce65c809b0015a2364b557b5479b269134a1f"
+
+      def install
+        bin.install "vault-token-helper"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.5/vault-token-helper_0.3.5_linux_amd64.tar.gz"
-      sha256 "e95c2faa83f83a48d17bb79295ac8b736df471f8b1256c735e27d5cf81211279"
+      url "https://github.com/joemiller/vault-token-helper/releases/download/v0.3.6/vault-token-helper_0.3.6_linux_amd64.tar.gz"
+      sha256 "c8c39d2f40f2dfc6ad3bdafd476e82c9ec386976ae9e3a7b86332ac8c4e3afbf"
+
+      def install
+        bin.install "vault-token-helper"
+      end
     end
   end
 
   depends_on "vault"
-
-  def install
-    bin.install "vault-token-helper"
-  end
 
   def caveats; <<~EOS
     Run this to create the ~/.vault file. This will configure vault to use the token helper:
