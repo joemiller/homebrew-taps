@@ -5,23 +5,35 @@
 class YkAttestVerify < Formula
   desc "Validate and enforce policy on YubiKey PIV and OpenPGP attestation certificates"
   homepage "https://github.com/joemiller/yk-attest-verify"
-  version "0.0.3"
-  bottle :unneeded
+  version "0.0.4"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.3/yk-attest-verify_darwin_amd64.tar.gz"
-    sha256 "2c44bade104a12c6cea50bf538682ce0bdcfe700462a3512c758bab4e91de77e"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.3/yk-attest-verify_linux_amd64.tar.gz"
-    sha256 "83ba3a25ffcee0c86075fffd356c239780a993a80785875c14d2896668168204"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.3/yk-attest-verify_linux_arm64.tar.gz"
-    sha256 "9bf8a224e8bc16ae21ce75afcfe78a6a6ccec6385d2cafc6c2c3ece63c8705c5"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.4/yk-attest-verify_darwin_amd64.tar.gz"
+      sha256 "228d667c1a538a5576503dadef6ec8f03f0ed425656494d5bd023d837eb2bfc0"
+
+      def install
+        bin.install "yk-attest-verify"
+      end
+    end
   end
 
-  def install
-    bin.install "yk-attest-verify"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.4/yk-attest-verify_linux_arm64.tar.gz"
+      sha256 "90e54fb5f32c1a34fcb2a7b20923ccda5649b8617e02517a112c2b55dd41cbe6"
+
+      def install
+        bin.install "yk-attest-verify"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.0.4/yk-attest-verify_linux_amd64.tar.gz"
+      sha256 "3351dd48db97c8582b676efc4928cd7b310915d06bf8e5e5d9aae1459671a764"
+
+      def install
+        bin.install "yk-attest-verify"
+      end
+    end
   end
 end
