@@ -5,12 +5,12 @@
 class Certin < Formula
   desc "Certin is a Go library and CLI for quickly creating keys and certificates for use as test fixtures."
   homepage "https://github.com/joemiller/certin"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.2.2/certin_darwin_amd64.tar.gz"
-      sha256 "6ac58c4a7961ddee80c5461960ca5993b5926ced87470d979b990a0da906f152"
+      url "https://github.com/joemiller/certin/releases/download/v0.2.3/certin_darwin_amd64.tar.gz"
+      sha256 "2f2dfda57c012f53689a866c894ca2315414f68cf4fc95b995673afa5ea61b42"
 
       def install
         bin.install "certin"
@@ -19,17 +19,17 @@ class Certin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/certin/releases/download/v0.2.2/certin_linux_arm64.tar.gz"
-      sha256 "35d1ddcca372f951f4b37e05a3df9e3cc57e70a67997ef70fc0daf4117d76d8a"
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/certin/releases/download/v0.2.3/certin_linux_amd64.tar.gz"
+      sha256 "adf8bd3286c78da582e260b6080367f4659e62bb998a7c5b825787baa50557a2"
 
       def install
         bin.install "certin"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.2.2/certin_linux_amd64.tar.gz"
-      sha256 "7717ad15e00a2f949002a4b74dda0d743768682dab846afce2f28a91c53ab600"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joemiller/certin/releases/download/v0.2.3/certin_linux_arm64.tar.gz"
+      sha256 "a108131c3666732500e0e848003e6339870f06589155d9e5a6a24e935e29d64d"
 
       def install
         bin.install "certin"
