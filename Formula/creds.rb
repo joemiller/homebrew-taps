@@ -6,8 +6,6 @@ class Creds < Formula
 
   head 'https://github.com/joemiller/creds.git'
 
-  bottle :unneeded
-
   def install
     bin.install 'creds'
     zsh_completion.install 'completions/zsh/_creds.sh'
