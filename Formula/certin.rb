@@ -5,12 +5,20 @@
 class Certin < Formula
   desc "Certin is a Go library and CLI for quickly creating keys and certificates for use as test fixtures."
   homepage "https://github.com/joemiller/certin"
-  version "0.3.2"
+  version "0.3.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.2/certin_darwin_amd64.tar.gz"
-      sha256 "3016b5aa37e01574177d02a7dfdd057c9b3beb5c66e92e094af6f59b93a9b7b9"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_darwin_amd64.tar.gz"
+      sha256 "4eb8491014bfe04e6f7d3a442324f57d1129d54c29046c5890dfecea508a8ecd"
+
+      def install
+        bin.install "certin"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_darwin_arm64.tar.gz"
+      sha256 "9cd005da637ad7a86714ed221fb7dcdb75e81ac199a53d46509af1be7483d728"
 
       def install
         bin.install "certin"
@@ -19,17 +27,17 @@ class Certin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.2/certin_linux_amd64.tar.gz"
-      sha256 "d16efe9f0afb5c017107070e658d44d5f522887170e436067fb5809fdb2e4d52"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_linux_arm64.tar.gz"
+      sha256 "e209ea9d696858820c8d929d54c75c72a444b66b36a0f7beb8fcc74385fb13c9"
 
       def install
         bin.install "certin"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.2/certin_linux_arm64.tar.gz"
-      sha256 "36f64bdd6c2175bd1f09c1515ec1defdeba233b6f62b0c2209f8aba2a5ec4cd6"
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_linux_amd64.tar.gz"
+      sha256 "dc9aa05b2dbb43093cb7e6a53a45d2633ff35c5b3aecd81bb2832d5d2ba8b8d7"
 
       def install
         bin.install "certin"
