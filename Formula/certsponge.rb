@@ -5,20 +5,20 @@
 class Certsponge < Formula
   desc "Utility for splitting Vault's PKI output into one or more files containing the private key, certificate, and CA data"
   homepage "https://github.com/joemiller/certsponge"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certsponge/releases/download/v0.0.1/certsponge_darwin_amd64.tar.gz"
-      sha256 "a01000253dd73952c454e691f45538301bcefa466590dda1cc84cbd7b47df3c9"
+      url "https://github.com/joemiller/certsponge/releases/download/v0.0.2/certsponge_darwin_amd64.tar.gz"
+      sha256 "a63a4b98699730afe2fe34ac57f0bf092494a7df86bacc6071c1fd1b604151b3"
 
       def install
         bin.install "certsponge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/joemiller/certsponge/releases/download/v0.0.1/certsponge_darwin_arm64.tar.gz"
-      sha256 "a6a2c7a1418f27874c5b2460d3a165f5a0af9373698a0a0340b47cae1319e1d5"
+      url "https://github.com/joemiller/certsponge/releases/download/v0.0.2/certsponge_darwin_arm64.tar.gz"
+      sha256 "615f317e09fde8f5c67e46df12995df55d04fc4f5668db21015a735d484a5ee3"
 
       def install
         bin.install "certsponge"
@@ -28,16 +28,16 @@ class Certsponge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/certsponge/releases/download/v0.0.1/certsponge_linux_arm64.tar.gz"
-      sha256 "a5b840cc5fb8bbc648b5161ad062ae4a94933ff9a0f725920050f65c09f1bd76"
+      url "https://github.com/joemiller/certsponge/releases/download/v0.0.2/certsponge_linux_arm64.tar.gz"
+      sha256 "4a69b341c3349477dbe96c65b5073850a959b2aced97439a0729bc1d0168d71b"
 
       def install
         bin.install "certsponge"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certsponge/releases/download/v0.0.1/certsponge_linux_amd64.tar.gz"
-      sha256 "eae9e4ed156432833d85de564343362a475a71432354cbe9c456c8196a625eb0"
+      url "https://github.com/joemiller/certsponge/releases/download/v0.0.2/certsponge_linux_amd64.tar.gz"
+      sha256 "2c0233eb8a59f4c98669921192146c87da4b462f6e754b3d56b22567ce435bff"
 
       def install
         bin.install "certsponge"
