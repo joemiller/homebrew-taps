@@ -5,20 +5,20 @@
 class Certin < Formula
   desc "Certin is a Go library and CLI for quickly creating keys and certificates for use as test fixtures."
   homepage "https://github.com/joemiller/certin"
-  version "0.3.3"
+  version "0.3.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_darwin_amd64.tar.gz"
-      sha256 "4eb8491014bfe04e6f7d3a442324f57d1129d54c29046c5890dfecea508a8ecd"
+    if Hardware::CPU.arm?
+      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_darwin_arm64.tar.gz"
+      sha256 "0c9d3a55eef593350df01792dbfeb47d08d17b5e94f5fba05f2dffbcf1e8a72a"
 
       def install
         bin.install "certin"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_darwin_arm64.tar.gz"
-      sha256 "9cd005da637ad7a86714ed221fb7dcdb75e81ac199a53d46509af1be7483d728"
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_darwin_amd64.tar.gz"
+      sha256 "02d1cebba6b153743184e0dbcb3d09d1042800e4a69bad1e1b3cfc908e28c3e8"
 
       def install
         bin.install "certin"
@@ -28,16 +28,16 @@ class Certin < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_linux_arm64.tar.gz"
-      sha256 "e209ea9d696858820c8d929d54c75c72a444b66b36a0f7beb8fcc74385fb13c9"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_linux_arm64.tar.gz"
+      sha256 "837ad60b03dcdab4f15a22c813f6013ba5f683be29146f8c0a57effe77465ce1"
 
       def install
         bin.install "certin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.3/certin_linux_amd64.tar.gz"
-      sha256 "dc9aa05b2dbb43093cb7e6a53a45d2633ff35c5b3aecd81bb2832d5d2ba8b8d7"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_linux_amd64.tar.gz"
+      sha256 "9e176047d418ca4f954a3e5ea0c98d38c456868ebcfdaa5763b5c6160b73b8d4"
 
       def install
         bin.install "certin"
