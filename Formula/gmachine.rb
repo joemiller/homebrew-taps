@@ -5,20 +5,20 @@
 class Gmachine < Formula
   desc "Manage cloud machines on Google Cloud Platform"
   homepage "https://github.com/joemiller/gmachine"
-  version "0.0.2"
+  version "0.0.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/joemiller/gmachine/releases/download/v0.0.2/gmachine_darwin_arm64.tar.gz"
-      sha256 "c4c9bafde9fbe074825ffdd97cdac04bbf8817b6f8304af5469a84f2c0c3c0fc"
+      url "https://github.com/joemiller/gmachine/releases/download/v0.0.3/gmachine_darwin_arm64.tar.gz"
+      sha256 "1cff5c0c7c8930d49604a0623f37bd4adc9d519a8598aff2955d7e49e11ec05a"
 
       def install
         bin.install "gmachine"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/gmachine/releases/download/v0.0.2/gmachine_darwin_amd64.tar.gz"
-      sha256 "f795f32decd32a57992654c03901a79bed4ce3e656e77d10ba2235108e114146"
+      url "https://github.com/joemiller/gmachine/releases/download/v0.0.3/gmachine_darwin_amd64.tar.gz"
+      sha256 "dc973efcc75d29ca1462fe1b991ed8cf5f5ae9a5dd984a34638e4f97eacc62ae"
 
       def install
         bin.install "gmachine"
@@ -27,17 +27,17 @@ class Gmachine < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joemiller/gmachine/releases/download/v0.0.2/gmachine_linux_amd64.tar.gz"
-      sha256 "1624b803ae60aee8b0ef024acde0b5fe4d7199700af294f0de115d02618b5ab3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joemiller/gmachine/releases/download/v0.0.3/gmachine_linux_arm64.tar.gz"
+      sha256 "557e5a147ca3bfbccca26fccb57db498221810ada12fdd79d43839e995e674c7"
 
       def install
         bin.install "gmachine"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/gmachine/releases/download/v0.0.2/gmachine_linux_arm64.tar.gz"
-      sha256 "e2f70499bd02634422136ee875a3d86b802d04ed7bd6dbad8ff7aaf83091d48c"
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/gmachine/releases/download/v0.0.3/gmachine_linux_amd64.tar.gz"
+      sha256 "8c4da410efb85c082b8afecb4a4e343d1ca082c5cd548baccd3cb07cfa55d7ed"
 
       def install
         bin.install "gmachine"
