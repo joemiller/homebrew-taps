@@ -5,20 +5,20 @@
 class Certin < Formula
   desc "Certin is a Go library and CLI for quickly creating keys and certificates for use as test fixtures."
   homepage "https://github.com/joemiller/certin"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_darwin_arm64.tar.gz"
-      sha256 "0c9d3a55eef593350df01792dbfeb47d08d17b5e94f5fba05f2dffbcf1e8a72a"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.5/certin_darwin_arm64.tar.gz"
+      sha256 "f31ac8271b2466aadddef6fce6c26f746304e003b38e23b3179c0271b826bdfc"
 
       def install
         bin.install "certin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_darwin_amd64.tar.gz"
-      sha256 "02d1cebba6b153743184e0dbcb3d09d1042800e4a69bad1e1b3cfc908e28c3e8"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.5/certin_darwin_amd64.tar.gz"
+      sha256 "a99c7e68a3b8be83e465ec13b147f779ca0c826c373b78fe1c68f58427b5c09f"
 
       def install
         bin.install "certin"
@@ -28,16 +28,16 @@ class Certin < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_linux_arm64.tar.gz"
-      sha256 "837ad60b03dcdab4f15a22c813f6013ba5f683be29146f8c0a57effe77465ce1"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.5/certin_linux_arm64.tar.gz"
+      sha256 "bf660e3489ee9aecf1a4eadb4b6948504566c5cfc7a189a1332eab5f9bf27c85"
 
       def install
         bin.install "certin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/certin/releases/download/v0.3.4/certin_linux_amd64.tar.gz"
-      sha256 "9e176047d418ca4f954a3e5ea0c98d38c456868ebcfdaa5763b5c6160b73b8d4"
+      url "https://github.com/joemiller/certin/releases/download/v0.3.5/certin_linux_amd64.tar.gz"
+      sha256 "0696d89b1f3f7f6531a375973582e2504e6904837cd46bb89d7f7b58a1659e49"
 
       def install
         bin.install "certin"
