@@ -5,20 +5,20 @@
 class YkAttestVerify < Formula
   desc "Validate and enforce policy on YubiKey PIV and OpenPGP attestation certificates"
   homepage "https://github.com/joemiller/yk-attest-verify"
-  version "0.2.5"
+  version "0.2.6"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.5/yk-attest-verify_Darwin_amd64.tar.gz"
-      sha256 "21fb2d0ccb3ad7064370c74e49fd7068a1a4b80d697e87f7aa8b56f7711a9247"
+    if Hardware::CPU.arm?
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.6/yk-attest-verify_Darwin_arm64.tar.gz"
+      sha256 "7acb9ad523d9e3e8f82eda4cb4c6ab7f4c32ee29ba53f3598d8f9a486ff52144"
 
       def install
         bin.install "yk-attest-verify"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.5/yk-attest-verify_Darwin_arm64.tar.gz"
-      sha256 "ea792a470410d048d9d887e34df3813c01a93bf253228ca5b5bfa65190499a43"
+    if Hardware::CPU.intel?
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.6/yk-attest-verify_Darwin_amd64.tar.gz"
+      sha256 "330f2a52e62cca8bac73d29bb8cb39e6fdfcd8cc54c55e73afaabb76e4c644e1"
 
       def install
         bin.install "yk-attest-verify"
@@ -28,16 +28,16 @@ class YkAttestVerify < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.5/yk-attest-verify_Linux_arm64.tar.gz"
-      sha256 "b24e3188cf6156690376a529b22ddafe98363cac5b2d2b366e724b419caed220"
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.6/yk-attest-verify_Linux_arm64.tar.gz"
+      sha256 "fd67a3aa73f50768ca264fdf989afca53b6c693903f645ecaee6d282f74f1114"
 
       def install
         bin.install "yk-attest-verify"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.5/yk-attest-verify_Linux_amd64.tar.gz"
-      sha256 "c88139c186eca300a87075b77ccf67ddac4a5655226e9d3b25eeb92f70198442"
+      url "https://github.com/joemiller/yk-attest-verify/releases/download/v0.2.6/yk-attest-verify_Linux_amd64.tar.gz"
+      sha256 "dd6d76b70cadd146b35aef7c66f8c8278f51396420f18cd16504c8d910a711b4"
 
       def install
         bin.install "yk-attest-verify"
