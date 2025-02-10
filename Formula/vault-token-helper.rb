@@ -37,7 +37,7 @@ class VaultTokenHelper < Formula
     end
   end
 
-  depends_on "vault"
+  depends_on "hashicorp/tap/vault"
 
   def caveats; <<~EOS
     Run this to create the ~/.vault file. This will configure vault to use the token helper:
